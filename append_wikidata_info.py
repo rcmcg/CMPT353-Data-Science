@@ -5,7 +5,7 @@ import time
 from wikidata_api.WikidataAPI import WikidataAPI
 from pyspark.sql import SparkSession, functions, types
 
-spark = SparkSession.builder.appName('load extracted amenities').getOrCreate()
+spark = SparkSession.builder.appName('append wikidata info').getOrCreate()
 spark.sparkContext.setLogLevel('WARN')
 
 assert sys.version_info >= (3, 5) # make sure we have Python 3.5+

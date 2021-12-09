@@ -41,8 +41,6 @@ def main(in_directory, out_directory):
     # This list of values is in the 100s so safe to coalesce
     unique_amenities.coalesce(1).write.csv(out_directory, mode='overwrite')
 
-    
-
 if __name__=='__main__':
     in_directory = sys.argv[1]
     out_directory = sys.argv[2]

@@ -33,7 +33,6 @@ def main(in_directory, out_directory, amenities_to_drop):
         .select(all_amenities.columns)
     uf.print_dataframe("filtered_amenities", filtered_amenities)
 
-    # TESTING
     filtered_amenities.write.json(out_directory)
 
     # Count the occurrences of each amenity to get an idea of what we're looking at
