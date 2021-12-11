@@ -16,10 +16,6 @@ class ImageParser:
             print("Image metadata has no coordinates")
             return (lat, lon)
         else:
-            # print("Lat: " + str(img.gps_latitude))
-            # print("Lat reference: " + img.gps_latitude_ref)
-            # print("Lon: " + str(img.gps_longitude))
-            # print("Lon reference: " + img.gps_longitude_ref)
             lat = self.__convert_dms_to_dd(img.gps_latitude, img.gps_latitude_ref)
             lon = self.__convert_dms_to_dd(img.gps_longitude, img.gps_longitude_ref)
         return (lat, lon)
@@ -27,13 +23,10 @@ class ImageParser:
     def __open_image(self, filepath):
         with open(filepath, 'rb') as src:
             img = Image(src)
-            # print(src.name, img)
         return img
 
     def __convert_dms_to_dd(self, dms_coordinates, dms_coordinate_ref):
         dd_coordinate = dms_coordinates[0] + dms_coordinates[1] / 60 + dms_coordinates[2] / 3600
         if dms_coordinate_ref == "S" or dms_coordinate_ref == "W":
             dd_coordinate = -dd_coordinate
-        # print("convert_dms_to_dd")
-        # print("Returning: " + str(dd_coordinate))
         return dd_coordinate
