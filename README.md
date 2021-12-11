@@ -1,15 +1,7 @@
 # cmpt353-project
 
-<<<<<<< HEAD
 The final project for CMPT353.
 
------------------------------------------------------------------------
-Premise:    If I was planning a tour of the city (by walking/biking/driving), where should I go? 
-            Are there paths that take me past an interesting variety of things?
-
-run "spark-submit get_interesting_things.py provided/amenities-vancouver.json.gz" to acquire the vancouver-interesting-things.csv file
-run "python3 get_paths_to_interesting_things.py" to get the paths.csv file which contains recommended paths to visit different locations
-=======
 Dependencies for the project:
 - exif
 - lxml (if you'd like to use the code in .\provided\code)
@@ -27,7 +19,6 @@ CD into the root of the repository and run the following commands
 - spark-submit interesting_things_in_photos.py temp-dir-3 output_filename.csv
 
 The output_filename contains coordinates for the model's best guess of the most interesting amenity in the photo along with the amenities name and the photo's coordinates.
->>>>>>> 874bfe206740ef366ffec359f913807438345d26
 
 ## If I was planning a tour of the city (by walking/biking/driving), where should I go? Are there paths that take me past an interesting variety of things?
 CD into the root of the repository and run the following commands
