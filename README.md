@@ -10,6 +10,7 @@ Dependencies for the project:
 - numpy
 - geopy
 - tkinter
+- matplotlib
 
 ## How to get results for the first presented problem, "Given a collection of geotagged photos, can we create a model that attempts to find the most interesting thing in the photographs?"
 CD into the root of the repository and run the following commands
