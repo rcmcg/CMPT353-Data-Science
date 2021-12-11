@@ -30,10 +30,10 @@ def main(in_directory, out_directory, amenities_to_drop):
         .where(amenities_to_drop.amenity.isNull()) \
         .select(all_amenities.columns)
 
-    filtered_amenities.write.json(out_directory)
+    filtered_amenities.write.mode('overwrite').json(out_directory)
 
 if __name__=='__main__':
     in_directory = sys.argv[1]
     out_directory = sys.argv[2]
-    amenities_to_keep = sys.argv[3]
-    main(in_directory, out_directory, amenities_to_keep)
+    amenities_to_drop = sys.argv[3]
+    main(in_directory, out_directory, amenities_to_drop)
