@@ -27,3 +27,8 @@ CD into the root of the repository and run the following commands
 - python3 get_paths_to_interesting_things.py vancouver-interesting-things.csv
 
 The paths.csv file contains the recommended paths to a variety of "interesting things", assuming that a person can visit at most 3 locations in a day.
+
+## Is it true there are some parts of the city with more chain restaurants (e.g. McDonand's or White Spot franchises, not independently-owned places)? Is there some way to find the chain places automatically and visualize their density relative to non-chains?
+CD into the root of the repository and run the following commands
+
+The restaurant-info.csv file contains the information about restaurants in Vancouver (Combine with non-chain and chain restaurants together).
