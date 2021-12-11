@@ -94,7 +94,7 @@ def main(in_directory):
         
         # print(i)
     
-    # print(result)
+    print(result)
     # Write to csv 
     result.to_csv("paths.csv")    
 

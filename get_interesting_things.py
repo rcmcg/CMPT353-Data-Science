@@ -38,9 +38,9 @@ def extract_wikidata_id(tags):
 def main(in_directory):
     # Load data
     amenities = spark.read.json(in_directory, schema=amenities_schema)
-    # print("amenities:")
-    # print_shape(amenities)
-    # amenities.show()
+    print("amenities:")
+    print_shape(amenities)
+    amenities.show()
     
     extract_wiki_tag_udf = functions.udf(lambda x:extract_wikidata_id(x), returnType=types.StringType())
     amenities = amenities.withColumn("wikidata_id", extract_wiki_tag_udf(amenities.tags))
