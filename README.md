@@ -1,6 +1,6 @@
 # cmpt353-project
 
-The final project for CMPT353.
+This application was a collaboration between myself and other team members for CMPT 353 - Computational Data Science at Simon Fraser University. My commits are under rcmcg, reecem, or Reece McGowan.
 
 Dependencies for the project:
 - exif
